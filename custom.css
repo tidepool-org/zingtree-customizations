@@ -1,322 +1,179 @@
-@charset "utf-8";
-body.zingtree {
-	margin: 0 !important;
+/* custom CSS for Zingtree panels style - change these colors to suit your taste*/
+body {
+    margin: 0;
+    padding: 0;
+    color: #26282e;
+    background: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, San Francisco, Roboto, Segoe UI, Helvetica Neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    height: 100%;
+}
+/* Images */
+.zingtree-node.tag_options::before{
+    padding-top: calc(56.25% - 13.5px);
+    background: #d1cdeb url('./assets/images/checklist.png') no-repeat center center;
+    background-size: auto 100%;
+    width: 100%;
+    content: " ";
+    display: block;
+    border-radius: 4px;
 }
 
-/******************************************************
-	BODY TEXT COLOR
-******************************************************/
-
-
-body	{
-	color: #1d1d1d;
-    font-size: 18px;
+@media(min-width: 400px) {
+    .zingtree-node.tag_options::before{
+        background-position: -36px center;
+        background-size: auto 80px;
+        padding-top: 70px;
+    }
 }
 
-/******************************************************
-	LINK COLOR
-******************************************************/
-.content-question a, .content-answer a {
-  color: #4f6a92 !important;
-  font-weight:700;
-  text-decoration:none;
-}
-
-.content-question a:hover,
-.content-question a:focus, 
-.content-answer a:hover,
-.content-answer a:focus 
-{
-	text-decoration:underline;
-}
-
-.content-answer .btn,  .content-question .btn {
-    color:#ffffff;
-}
-
-/******************************************************
-	TITLE COLOR
-******************************************************/
-h3 {
-	color: #627cff;
-}
-
-.node-question-text  {
-	color: #627cff !important;
-	font-weight: bold;
-}
-/******************************************************
-	BUTTON VALUES
-******************************************************/
-
-.btn-zingtree {
-	border: 0 none;
-	font-weight: 700;
-    border-radius: 28px;
-}
-.btn-zingtree:focus, .btn:active:focus, .btn.active:focus {
-	outline: 0 none;
-}
-
-/******************************************************
-	PRIMARY BUTTON
-******************************************************/
-
-.btn-zingtree {
-  color: #ffffff;
-  background-color: #627cff;
-}
-.btn-zingtree:hover, .btn-zingtree:focus, .btn-zingtree:active, .btn-zingtree.active, .open > .dropdown-toggle.btn-zingtree {
-	background: #627cff;
-	opacity: 0.85;
-}
-.btn-zingtree:active, .btn-primary.active {
-	background: #627cff;
-	box-shadow: none;
-}
-
-/******************************************************
-	PERSISTENT BUTTONS
-******************************************************/
-.persistent-buttons .btn-default {
-    color: #333333;
-    background-color: #ffffff;
-    border: 2px solid #627cff;
-}
-
-.persistent-buttons .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active,
-.open .dropdown-toggle.btn-default {
-    color: #333333;
-    background-color: #ffffff;
-  	border-color: #627cff;
-}
-
-.persistent-buttons .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-    background-image: none;
-}
-
-/******************************************************
-	PANELS
-******************************************************/
-/* COLORS for Panels */
-
-.panel-primary > .panel-heading {
-	background-color: #ffffff;
-}
-.answers a.list-group-item {
-	background-color: #f8f8f8;
-	color: #1d1d1d;
-}
-.answers a.list-group-item div {
-	color: #1d1d1d;
-}
-.answers a.list-group-item:hover, .answers a.list-group-item:active {
-	background-color: #ffffff !important;
-}
-
-.list-group-item-question, .answers a.list-group-item strong {
-	background-color: #afafaf;
-}
-.list-group-item-question, .answers a.list-group-item strong::before {
-	background-color: #4f6a92;
-}
-.answers a.list-group-item::after {
-	border-color: #4f6a92;
-}
-.well {
-    background-color: #c6cddf57;
-    border: none;
-    box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.07);
-    -webkit-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.07);
-    -moz-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.07);
-}
-/* PANELS */
-
-.panel, .panel-heading {
-    border-style: none;
-      box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.07);
-    -webkit-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.07);
-    -moz-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.07);
-}
-.panels-node-title {
-	padding: 0.5em 3.4em 0.5em 1em;
-	position: relative;
-}
-/* fix for link icon */
-#node-title > .pull-right {
-	position: absolute;
-	top: 1em;
-	right: 1em;
-}
-.permalink {
-	margin-top: -9px;
-	margin-right: -7px;
-}
-/* panels design */
-.panel > .list-group .list-group-item {
-	border: none;
-	margin-bottom: 3px;
-	padding: 0.5em 3.5em 0.5em 1.5em;
-	-webkit-transition: background 200ms ease-in-out;
-	transition: background 200ms ease-in-out;
-    border-radius: 40px;
-}
-/* question */
-
-.panel > .list-group .list-group-item.list-group-item-question {
-	padding: 0.5em 3.5em;
-    border-radius: 0;
-}
-.list-group-item-question h4, .panels-node-title h3 {
-	font-size: 1.3em;
-	margin: .1em 0 .1em 1em;
-    color: #FFFFFF ;   
-    
-}
-
-.list-group-item-question .fa, .panels-node-title h3::before {
-	position: absolute;
-	left: .75em;
-	top: 50%;
-	margin-top: -.75em;
-	font-size: 1.1em;
-	border-radius: 100em;
-	width: 1.6em;
-	height: 1.6em;
-	text-align: center;
-	line-height: 1.5;
-    
-}
-
-.list-group-item-question .fa::before {
-	content: '\f059';
-    font-family: 'FontAwesome';
-    padding-right: 5px;
-}
-ul#qa-area {
-    background-color: #627cff;
-    padding-top: 12px;
-    padding-bottom: 16px;
+/* Content preamble */
+.content-only p span {
+    color: rgb(38, 40, 46) !important;
+    font-size: 18px !important;
+    line-height: 1.5em !important;
+    letter-spacing: 0.05px !important;
+    margin-bottom: .5em !important;
 }
 
 /* node title */
-.panels-node-title {
-	padding-left: 3.5em;
-}
-.panels-node-title h3::before {
-	content: '\f138';
-    font-family: 'FontAwesome';
-    padding-right: 5px;
-}
-	
-.panels-node-title h3 {
-	display: inline-block;
-	vertical-align: text-top;
-	font-family: "Open Sans", sans-serif;
-    color: #627cff;
-	font-weight: 600;
-}
-.panel-heading.panels-node-title {
-    background-color: #ffffff !important;
+#node-title {
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 400;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
-/*question-panels*/
-li.list-group-item.list-group-item-question {
-    background-color: #627cff;
-}
-/* answers */
-.answers a.list-group-item {
-	font-size: 1.10em;
-	font-weight: 600;
-	overflow: hidden;
-    margin: 2%;
-}
-.answers a.list-group-item div {
-	margin-left: 0.34em;
-	font-size: 0.8em;
-}
-.answers a.list-group-item strong {
-	display: none;
-}
-.list-group-item:last-child {
-    margin-bottom: 2% !important;
+/* questions area */
+.node-question-text {
+    color: rgb(38, 40, 46);
+    margin-bottom: 1em;
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: 0.05px;
+    margin-top: 0;
 }
 
-/* arrows */
-.answers a.list-group-item::after {
-	content: '\f054';
-    font-family: 'FontAwesome';
+.node-question-text br {
+    display: none;
+}
+
+#qa-area {
+    background: none;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+}
+
+#qa-area > .row {
+    text-align: left;
+}
+
+/* buttons */
+.btn {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: transparent;
+    min-height: 24px;
+    padding: 6px 24px;
+    font-size: 12px;
+    border-radius: 32px;
+    width: auto;
+    transition: all 0.2s ease 0s;
+    cursor: pointer;
+    outline: none;
+    font-weight: 600;
+    user-select: none;
+    text-transform: uppercase;
+    margin-bottom: 16px;
     color: #4f6a92;
+    border: 1px solid #4f6a92;
+}
+
+/* .btn-primary {
+    color: #4f6a92;
+    border: 1px solid #4f6a92;
+}
+
+.btn-danger {
+    color: rgb(255, 74, 117);
+    border: 1px solid rgb(255, 74, 117);
+} */
+
+.answers .btn,
+.answers .btn:active,
+.answers .btn:hover {
+    font-size: 16px;
+    line-height: 1.5em;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    user-select: none;
+    margin-bottom: 12px;
+    color: rgb(38, 40, 46);
+    outline: 0px;
+    border: none;
+    text-align: left;
+    background: none;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.answers .btn::before,
+.answers .btn::after {
+    content: " ";
+    display: inline-flex;
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
     position: absolute;
-    right: 1.8em;
-    bottom: 0;
-    top: 0.6em;
-    margin: auto;
-    -webkit-transition: right 180ms ease-in 80ms, opacity 160ms ease-out;
-    transition: right 180ms ease-in 80ms, opacity 160ms ease-out;
-    opacity: 0;
-}
-.answers a.list-group-item:hover::after {
-	right: 1.5em;
-	opacity: 1;
-}
-.panel-body {
-	padding: 1.5em;
-}
-.permalink {
-	margin-top: -28px;
-	margin-right: -7px;
+    left: 0px;
+    top: 8px;
 }
 
-
-/* animation */
-
-@-webkit-keyframes arrow-move {
-     0% {
-     opacity: 0;
-     right: 0.8em;
-    }
-    80% {
-     opacity: 1;
-     right:0.5em;
-    }
-     100% {
-     opacity: 0;
-    }
-}
- @keyframes arrow-move {
-     0% {
-     opacity: 0;
-     right: 0.8em;
-    }
-     80% {
-     opacity: 1;
-     right: 0.5em;
-    }
-     100% {
-     opacity: 0;
-    }
+.answers .btn::before {
+    background-color: #4f6a92;
 }
 
-/* MEDIA */
-
-@media(max-width:768px) {
-    #nodes {
-        font-size: .82em;
-    }
-    #node-content {
-        font-size: 1.34em;
-    }
+.answers .btn::after {
+    background: transparent url("./assets/images/arrow-right-solid.svg") no-repeat center center;
+    background-size: 14px 14px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(169deg) brightness(106%) contrast(102%);
 }
 
-@media (max-width:767px) {
-    .button-node .answers [class*=col-sm-] {
-        width: 50%;
-    }
+.answers .btn:last-child {
+    margin-bottom: 0;
 }
 
-@media (max-width:400px) {
-    .button-node .answers [class*=col-sm-], .button-node .answers .col-md-offset-3.col-md-6 a {
-        width: 100%;
-    }
+.answers br {
+    display: none;
+}
+
+.persistent-buttons br {
+    display: none;
+}
+
+/* chevron in answers area of panels style
+you can change this to any of the icons in the FontAwesome set. Substitute the unicode value for the icon
+
+The complete list icons are here:
+http://fortawesome.github.io/Font-Awesome/icons/
+
+In this example, we are using fa-arrow-right to overwrite fa-chevron.
+fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Font-Awesome/icon/arrow-right/
+
+*/
+
+.fa-chevron-right:before {
+    content: "\f061";
 }
