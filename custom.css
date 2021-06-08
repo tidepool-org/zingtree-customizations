@@ -1,4 +1,5 @@
-/* custom CSS for Zingtree panels style - change these colors to suit your taste*/
+/* hosted at https://developer.tidepool.org/zingtree-customizations/custom.css */
+
 body {
     margin: 0;
     padding: 0;
@@ -99,15 +100,26 @@ body {
     border: 1px solid #4f6a92;
 }
 
-/* .btn-primary {
-    color: #4f6a92;
+.btn:focus {
+    background-color: white;
     border: 1px solid #4f6a92;
+    color: #4f6a92;
+    outline: none;
+    box-shadow: 0px 0px 0px 2px Highlight;
 }
 
-.btn-danger {
-    color: rgb(255, 74, 117);
-    border: 1px solid rgb(255, 74, 117);
-} */
+@media (-webkit-min-device-pixel-ratio:0) {
+    .btn:focus {
+        box-shadow: 0px 0px 0px 1px #005fcc;
+    }
+}
+
+.btn:hover,
+.btn:active{
+    background-color: #4f6a92;
+    border: 1px solid #4f6a92;
+    color: white;
+}
 
 .answers .btn {
     font-size: 16px;
@@ -178,13 +190,18 @@ body {
 
 /* Forms */
 form {
-    margin: 0.5em 0;
+    margin: 0;
 }
 
-.form-group:last-child {
-    margin: 0;
+.form-group {
+    margin-bottom: 1em;
 }
 
 .button-node-content br {
     display: none;
+}
+
+label.required-error {
+    border: none;
+    color: red;
 }
