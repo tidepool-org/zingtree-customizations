@@ -32,6 +32,10 @@ body {
     }
 }
 
+.zingtree-node > .row {
+    padding: 20px 0;
+}
+
 /* wysiwyg Content area */
 .content-only p span {
     color: rgb(38, 40, 46) !important;
@@ -80,6 +84,16 @@ body {
     text-decoration: underline;
 }
 
+/* tree title */
+h2#title {
+    font-size: 32px;
+    font-weight: 400;
+    text-align: left;
+}
+h2#title + p {
+    display: none;
+}
+
 /* node title */
 #node-title {
     font-size: 28px;
@@ -91,7 +105,7 @@ body {
 
 .button-node-title h3 {
     border-bottom: 3px solid #4f6a92;
-    margin: .675em 0 .675em;
+    margin: 0 0 .675em;
     padding-bottom: .2em;
 }
 
