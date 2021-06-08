@@ -92,14 +92,18 @@ h2#title {
     text-align: left;
     margin-bottom: 0;
 }
+
 h2#title + p {
     display: none;
 }
 
-/* node title */
+/* headings */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: 1.3;
+}
+
 #node-title {
     font-size: 28px;
-    line-height: 36px;
     font-weight: 400;
     margin-top: 0px;
     margin-bottom: 0px;
