@@ -109,9 +109,7 @@ body {
     border: 1px solid rgb(255, 74, 117);
 } */
 
-.answers .btn,
-.answers .btn:active,
-.answers .btn:hover {
+.answers .btn {
     font-size: 16px;
     line-height: 1.5em;
     display: block;
@@ -126,6 +124,13 @@ body {
     background: none;
     text-transform: none;
     font-weight: 400;
+    box-shadow: none;
+}
+
+.answers .btn:active,
+.answers .btn:focus,
+.answers .btn:hover {
+    text-decoration: underline;
 }
 
 .answers .btn::before,
@@ -138,7 +143,7 @@ body {
     border-radius: 100%;
     position: absolute;
     left: 0px;
-    top: 8px;
+    top: 9px;
 }
 
 .answers .btn::before {
@@ -159,21 +164,27 @@ body {
     display: none;
 }
 
+.persistent-buttons {
+    margin-top: 2em;
+}
+
+.persistent-buttons .btn i {
+    display: none;
+}
+
 .persistent-buttons br {
     display: none;
 }
 
-/* chevron in answers area of panels style
-you can change this to any of the icons in the FontAwesome set. Substitute the unicode value for the icon
+/* Forms */
+form {
+    margin: 0.5em 0;
+}
 
-The complete list icons are here:
-http://fortawesome.github.io/Font-Awesome/icons/
+.form-group:last-child {
+    margin: 0;
+}
 
-In this example, we are using fa-arrow-right to overwrite fa-chevron.
-fa-arrow-right has a unicode value of f061. See http://fortawesome.github.io/Font-Awesome/icon/arrow-right/
-
-*/
-
-.fa-chevron-right:before {
-    content: "\f061";
+.button-node-content br {
+    display: none;
 }
