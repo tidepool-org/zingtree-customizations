@@ -32,13 +32,30 @@ body {
     }
 }
 
-/* Content preamble */
+/* wysiwyg Content area */
 .content-only p span {
     color: rgb(38, 40, 46) !important;
     font-size: 18px !important;
     line-height: 1.5em !important;
     letter-spacing: 0.05px !important;
     margin-bottom: .5em !important;
+}
+
+.content-only h3 {
+    color: rgb(38, 40, 46);
+    margin-bottom: 1em;
+    font-size: 18px;
+    line-height: 1.5em;
+    letter-spacing: 0.05px;
+    margin-top: 0;
+}
+
+.content-only a {
+    color: #6582FF;
+}
+
+.content-only a:hover {
+    text-decoration: underline;
 }
 
 /* node title */
@@ -48,6 +65,12 @@ body {
     font-weight: 400;
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.button-node-title h3 {
+    border-bottom: 3px solid #4f6a92;
+    margin: .675em 0 .675em;
+    padding-bottom: .2em;
 }
 
 /* questions area */
@@ -194,7 +217,7 @@ form {
 }
 
 .form-group {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
 }
 
 .button-node-content br {
