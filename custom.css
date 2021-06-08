@@ -41,17 +41,39 @@ body {
     margin-bottom: .5em !important;
 }
 
-.content-only h3 {
+.content-only h1,
+.content-only h2,
+.content-only h3,
+.content-only h1 {
     color: rgb(38, 40, 46);
     margin-bottom: 1em;
-    font-size: 18px;
     line-height: 1.5em;
     letter-spacing: 0.05px;
     margin-top: 0;
 }
 
+.content-only h1 {
+    font-size: 24px;
+}
+
+.content-only h2 {
+    font-size: 21px;
+}
+
+.content-only h3 {
+    font-size: 18px;
+}
+
+.content-only h4 {
+    font-size: 16px;
+}
+
 .content-only a {
     color: #6582FF;
+}
+
+.content-only strong {
+    font-weight: 500;
 }
 
 .content-only a:hover {
