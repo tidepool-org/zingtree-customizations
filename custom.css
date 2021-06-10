@@ -1,5 +1,9 @@
 /* hosted at https://developer.tidepool.org/zingtree-customizations/custom.css */
 
+/* html {
+    height: 100%;
+} */
+
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +16,9 @@ body {
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     height: 100%;
+    /* min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto; */
 }
 
 .zingtree-node > .row {
@@ -241,8 +248,49 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     display: none;
 }
 
-.persistent-buttons {
-    margin-top: 0;
+/* Sticky Footer */
+/* .widewrapper.main .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.widewrapper.main .container > div.persistent-buttons {
+    margin-top: auto;
+    background-color: #f2f6f8;
+    border-top: 1px solid #d1cdeb;
+} */
+
+/* Fixed Footer */
+.widewrapper.main .container {
+    height: 100%;
+}
+.widewrapper.main .zingtree-node {
+    margin-bottom: 45px;
+}
+
+.widewrapper.main .zingtree-node.tag_no-footer {
+    margin-bottom: 0
+}
+
+.widewrapper.main .container > div.persistent-buttons {
+    position: fixed;
+    left: 15px;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f6f8;
+    border-top: 1px solid #d1cdeb;
+}
+
+/* Persistent button styles */
+.persistent-buttons > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.persistent-buttons > div:last-child {
+    font-size: 0;
 }
 
 .persistent-buttons .btn i {
@@ -251,6 +299,58 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .persistent-buttons br {
     display: none;
+}
+
+.persistent-buttons .btn {
+    font-size: 16px;
+    line-height: 1.5em;
+    display: inline-block;
+    position: relative;
+    padding: 16px 0 16px 30px;
+    user-select: none;
+    margin-bottom: 0;
+    color: rgb(38, 40, 46);
+    outline: 0px;
+    border: none;
+    text-align: left;
+    background: none;
+    text-transform: none;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+.persistent-buttons .btn:active,
+.persistent-buttons .btn:focus,
+.persistent-buttons .btn:hover {
+    text-decoration: underline;
+}
+
+.persistent-buttons .btn::before,
+.persistent-buttons .btn::after {
+    content: " ";
+    display: inline-flex;
+    margin-right: 4px;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0px;
+    top: 19px;
+}
+
+.persistent-buttons .btn::before {
+    background-color: #4f6a92;
+}
+
+.persistent-buttons .btn::after {
+    background: transparent url("./assets/images/arrow-left-solid.svg") no-repeat center center;
+    background-size: 14px 14px;
+    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(169deg) brightness(106%) contrast(102%);
+}
+
+.persistent-buttons #restart_button::after {
+    background: transparent url("./assets/images/undo-alt-solid.svg") no-repeat center center;
+    background-size: 12px 12px;
 }
 
 /* Forms */
