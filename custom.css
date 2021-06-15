@@ -1,9 +1,5 @@
 /* hosted at https://developer.tidepool.org/zingtree-customizations/custom.css */
 
-/* html {
-    height: 100%;
-} */
-
 body {
     margin: 0;
     padding: 0;
@@ -16,9 +12,6 @@ body {
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     height: 100%;
-    /* min-height: 100%;
-    display: grid;
-    grid-template-rows: 1fr auto; */
 }
 
 .zingtree-node > .row {
@@ -247,19 +240,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .answers br {
     display: none;
 }
-
-/* Sticky Footer */
-/* .widewrapper.main .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.widewrapper.main .container > div.persistent-buttons {
-    margin-top: auto;
-    background-color: #f2f6f8;
-    border-top: 1px solid #d1cdeb;
-} */
 
 /* Fixed Footer */
 .widewrapper.main .container {
