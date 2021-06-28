@@ -29,10 +29,25 @@ body {
     border-radius: 4px;
 }
 
+.zingtree-node.tag_dexcom::before{
+    padding-top: 25vw;
+    background: transparent url('./assets/images/dexcom.png') no-repeat center bottom;
+    background-size: 80% auto;
+    width: 100%;
+    content: " ";
+    display: block;
+}
+
 @media(min-width: 400px) {
     .zingtree-node.tag_options::before{
         background-position: -36px center;
         background-size: auto 80px;
+        padding-top: 70px;
+    }
+
+    .zingtree-node.tag_dexcom::before{
+        background-position: 0px center;
+        background-size: 280px auto;
         padding-top: 70px;
     }
 }
@@ -111,6 +126,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .button-node-title h3 {
     border-bottom: 3px solid #4f6a92;
+    margin: 0 0 .675em;
+    padding-bottom: .2em;
+}
+
+.tag_dexcom .button-node-title h3 {
+    border-bottom: 3px solid #f1f1f1;
     margin: 0 0 .675em;
     padding-bottom: .2em;
 }
@@ -225,6 +246,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .answers .btn::before {
     background-color: #4f6a92;
+}
+
+.tag_dexcom .answers .btn::before {
+    background-color: #63A844;
 }
 
 .answers .btn::after {
